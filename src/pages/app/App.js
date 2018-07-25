@@ -6,6 +6,10 @@ import routes from './routes';
 import Footer from '../../components/Footer';
 import RootStore from '../../store';
 
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  window.appStore = { ...RootStore };
+}
+
 class App extends Component {
   render() {
     return (
