@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import Loader from '../../components/Loader';
+import { Container } from './elements';
 
 class Products extends Component {
   render() {
-    return <div>Products</div>;
+    return (
+      <Container>
+        <Loader />
+      </Container>
+    );
   }
 }
 
