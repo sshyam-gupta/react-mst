@@ -1,4 +1,4 @@
-import { types } from 'mobx-state-tree';
+import { types, destroy } from 'mobx-state-tree';
 
 import Product from './Product';
 
@@ -9,6 +9,9 @@ const Products = types
   .actions(self => ({
     add(product) {
       self.products.push(product);
+    },
+    remove(product) {
+      destroy(product);
     }
   }))
   .views(self => ({

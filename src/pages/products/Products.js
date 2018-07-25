@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Loader from '../../components/Loader';
+
 import { Container } from './elements';
-import ProductItem from './ProductItem';
-import { inject, observer } from 'mobx-react';
+import { inject } from 'mobx-react';
+import ProductList from './ProductList';
+import AddProduct from './AddProduct';
 
 class Products extends Component {
   render() {
@@ -10,12 +11,11 @@ class Products extends Component {
 
     return (
       <Container>
-        {products.map((product, index) => (
-          <ProductItem key={index} product={product} />
-        ))}
+        <AddProduct />
+        <ProductList products={products} />
       </Container>
     );
   }
 }
 
-export default inject('productStore')(observer(Products));
+export default inject('productStore')(Products);
