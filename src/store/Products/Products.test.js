@@ -11,13 +11,11 @@ it('Can add new product', () => {
     states.push(snapshot);
   });
 
-  item.add(
-    Product.create({
-      name: 'test',
-      price: 10,
-      image: 'sdds'
-    })
-  );
+  item.add({
+    name: 'test',
+    price: 10,
+    image: 'sdds'
+  });
 
   expect(item.products.length).toBe(1);
 
