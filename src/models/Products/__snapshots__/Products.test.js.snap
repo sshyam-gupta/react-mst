@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Can add new product 1`] = `
+Object {
+  "products": Array [
+    Object {
+      "image": "sdds",
+      "name": "Shyam",
+      "price": 10,
+    },
+  ],
+}
+`;
+
+exports[`Can add new product 2`] = `
+Array [
+  Object {
+    "products": Array [
+      Object {
+        "image": "sdds",
+        "name": "test",
+        "price": 10,
+      },
+    ],
+  },
+  Object {
+    "products": Array [
+      Object {
+        "image": "sdds",
+        "name": "Shyam",
+        "price": 10,
+      },
+    ],
+  },
+]
+`;

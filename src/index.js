@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { App } from './containers/app';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import { App } from './pages/app'
 
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker'
 
 function renderApp() {
-  ReactDOM.render(<App />, document.getElementById('root'));
+  ReactDOM.render(<App />, document.getElementById('root'))
 }
 
-renderApp();
-registerServiceWorker();
+renderApp()
+registerServiceWorker()
 
 if (module.hot) {
-  module.hot.accept('./containers/app', () => {
+  module.hot.accept('./pages/app', () => {
     renderApp()
   })
 }
